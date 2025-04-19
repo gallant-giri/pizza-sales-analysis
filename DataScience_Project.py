@@ -21,7 +21,7 @@ import io
 
 def load_dataset():
     """Load the pizza sales dataset from local file."""
-    return pd.read_csv(r"D:\RVCE\1st sem\EL and projects 1st sem\DataScience\phase2\dataset\pizza_sales.csv")
+    return pd.read_csv(r"pizza_sales.csv")
 
 
 def load_mask_image():
