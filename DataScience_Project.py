@@ -19,9 +19,16 @@ import io
 #         return pd.read_csv(uploaded_file)
 #     return None
 
+import os
+
 def load_dataset():
     """Load the pizza sales dataset from local file."""
-    return pd.read_csv(r"D:\RVCE\1st sem\EL and projects 1st sem\DataScience\phase2\dataset\pizza_sales.csv")
+    file_path = "pizza_sales.csv"
+    if os.path.exists(file_path):
+        return pd.read_csv(file_path)
+    else:
+        st.error(f"File '{file_path}' not found. Please upload the correct file.")
+        return None
 
 
 def load_mask_image():
